@@ -1,20 +1,11 @@
 class Heroe {
-  alterEgo: string;
-  edad: number;
-  nombreReal: number;
-
-  imprimirNombre() {
-    return this.alterEgo + ' ' + this.nombreReal;
-  }
+  constructor(
+    public alterEgo: string,
+    public edad?: number,
+    public nombreReal?: string
+  ) {}
 }
 
-interface Personaje2 {
-  alterEgo?: string;
-  edad?: number;
-  nombreReal?: number;
-}
+const ironman = new Heroe('Ironman', 48, 'Tony');
 
-const ironman = new Heroe();
-const spiderman: Personaje2 = {};
-
-console.log(ironman.edad);
+console.log(ironman);
